@@ -34,22 +34,22 @@ document.addEventListener('DOMContentLoaded', function() {
     var html = '';
     if (metodo === 'biseccion') {
       html += '<label>f(x):</label><input id="fx" type="text" placeholder="Ej: x*x-2">';
-  html += '<label>a:</label><input id="a" type="number" step="any">';
-  html += '<label>b:</label><input id="b" type="number" step="any">';
-  html += '<label>Tolerancia:</label><input id="tol" type="number" step="any" value="0.0001">';
-  html += '<label>Máx. iteraciones:</label><input id="maxIter" type="number" step="any" value="50">';
+      html += '<label>a:</label><input id="a" type="number" step="any">';
+      html += '<label>b:</label><input id="b" type="number" step="any">';
+      html += '<label>Tolerancia:</label><input id="tol" type="number" step="any" value="0.0001">';
+      html += '<label>Máx. iteraciones:</label><input id="maxIter" type="number" step="any" value="50">';
     } else if (metodo === 'newton') {
       html += '<label>f(x):</label><input id="fx" type="text" placeholder="Ej: x*x-2">';
       html += '<label>f\'(x):</label><input id="dfx" type="text" placeholder="Ej: 2*x">';
-  html += '<label>x0:</label><input id="x0" type="number" step="any">';
-  html += '<label>Tolerancia:</label><input id="tol" type="number" step="any" value="0.0001">';
-  html += '<label>Máx. iteraciones:</label><input id="maxIter" type="number" step="any" value="50">';
+      html += '<label>x0:</label><input id="x0" type="number" step="any">';
+      html += '<label>Tolerancia:</label><input id="tol" type="number" step="any" value="0.0001">';
+      html += '<label>Máx. iteraciones:</label><input id="maxIter" type="number" step="any" value="50">';
     } else if (metodo === 'secante') {
       html += '<label>f(x):</label><input id="fx" type="text" placeholder="Ej: x*x-2">';
-  html += '<label>x0:</label><input id="x0" type="number" step="any">';
-  html += '<label>x1:</label><input id="x1" type="number" step="any">';
-  html += '<label>Tolerancia:</label><input id="tol" type="number" step="any" value="0.0001">';
-  html += '<label>Máx. iteraciones:</label><input id="maxIter" type="number" step="any" value="50">';
+      html += '<label>x0:</label><input id="x0" type="number" step="any">';
+      html += '<label>x1:</label><input id="x1" type="number" step="any">';
+      html += '<label>Tolerancia:</label><input id="tol" type="number" step="any" value="0.0001">';
+      html += '<label>Máx. iteraciones:</label><input id="maxIter" type="number" step="any" value="50">';
     }
     inputsModal.innerHTML = html;
 
