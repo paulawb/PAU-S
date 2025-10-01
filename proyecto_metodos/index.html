@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Métodos Numéricos - Simple</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #e3f2fd; margin: 0; padding: 0; }
+    .container { max-width: 600px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(33,150,243,0.12); padding: 32px; }
+    h1 { color: #1976d2; text-align: center; }
+    .form-section { margin-bottom: 32px; }
+    label { display: block; margin-bottom: 6px; font-weight: bold; }
+    input, select { width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #90caf9; }
+    button { padding: 10px 24px; background: #1976d2; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: 500; }
+    .tabla-scroll {
+      width: 100%;
+      margin-top: 18px;
+      border-radius: 8px;
+      background: #e3f2fd;
+    }
+    table { min-width: 600px; border-collapse: collapse; background: #e3f2fd; border-radius: 8px; }
+    th, td { border: 1px solid #90caf9; padding: 8px; text-align: center; }
+    th { background: #bbdefb; }
+    .error { color: #d32f2f; background: #ffebee; border-radius: 6px; padding: 8px; margin-bottom: 10px; font-weight: 500; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Métodos Numéricos</h1>
+    <div class="form-section">
+      <label for="metodo">Selecciona el método:</label>
+      <select id="metodo">
+        <option value="biseccion">Bisección</option>
+        <option value="newton">Newton-Raphson</option>
+        <option value="secante">Secante</option>
+      </select>
+      <button id="abrirModal" style="margin-top:10px;">Abrir método</button>
+    </div>
+  </div>
+
+  <!-- Modal para el método -->
+  <div id="modalMetodo" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(33,150,243,0.12); z-index:1000; align-items:center; justify-content:center;">
+  <div style="background:#fff; border-radius:16px; box-shadow:0 8px 32px rgba(33,150,243,0.18); padding:32px; max-width:600px; margin:auto; position:relative; max-height:80vh; overflow-y:auto;">
+      <button id="cerrarModal" style="position:absolute; top:12px; right:18px; background:none; border:none; font-size:1.5rem; color:#1976d2; cursor:pointer;">&times;</button>
+      <h2 id="tituloMetodo" style="color:#1976d2;"></h2>
+      <form id="formularioModal">
+        <div id="inputsModal"></div>
+        <button type="submit">Calcular</button>
+      </form>
+      <div id="errorModal" class="error" style="display:none"></div>
+  <div id="resultadosModal" class="tabla-scroll"></div>
+  <div id="graficaModal" style="margin-top:24px;"></div>
+      <div id="graficaModal" style="margin-top:24px;"></div>
+    </div>
+  </div>
+
+  <!-- Plotly.js CDN -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="modelos/biseccion.js"></script>
+  <script src="modelos/newton.js"></script>
+  <script src="modelos/secante.js"></script>
+  <script src="controladores/biseccion_controller.js"></script>
+  <script src="controladores/newton_controller.js"></script>
+  <script src="controladores/secante_controller.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
